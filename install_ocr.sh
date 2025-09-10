@@ -29,7 +29,7 @@ install_deps() {
 install_script() {
     local install_dir="$HOME/.local/bin"
     local script_name="ocr_screen.sh"
-    local repo_url="https://raw.githubusercontent.com/your_username/your_repo/main"
+    local repo_url="https://raw.githubusercontent.com/mairangh/ocr_screen_ar_kde/main"
 
     mkdir -p "$install_dir"
     curl -sSL "$repo_url/$script_name" -o "$install_dir/$script_name"
