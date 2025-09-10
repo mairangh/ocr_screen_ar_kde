@@ -32,7 +32,11 @@ done
 
 # Проверить результат
 if [ -s "$TEMP_IMG" ]; then
-    tesseract "$TEMP_IMG" stdout -l eng+rus 2>/dev/null | wl-copy
+    TEXT=$(tesseract "$TEMP_IMG" stdout -l eng+rus 2>/dev/null)
+    if [ "${TEXT: -1}" = $'\n' ]; then
+        TEXT="${TEXT%$'\n'}"
+    fi
+    printf '%s' "$TEXT" | wl-copy
     notify-send "OCR" "Текст скопирован в буфер!"
 else
     notify-send "OCR Error" "Не удалось получить изображение"
