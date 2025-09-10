@@ -67,7 +67,6 @@ main() {
     #         set_hotkey
     #     else
     echo -e "${GREEN}Установка завершена!${NC}"
-    echo -e "${YELLOW}Перезапустите терминал или выполните: source ~/.bashrc${NC}"
     echo -e "${YELLOW}Добавьте горячую клавишу для: $HOME/.local/bin/ocr_screen.sh${NC}"
 }
 
