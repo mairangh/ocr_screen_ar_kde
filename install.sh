@@ -13,10 +13,10 @@ install_deps() {
     case $ID in
         debian|ubuntu|pop)
             sudo apt update
-            sudo apt install -y spectacle tesseract-ocr tesseract-ocr-rus tesseract-ocr-eng wl-clipboard libnotify-bin maim
+            sudo apt install -y spectacle tesseract-ocr tesseract-ocr-rus tesseract-ocr-eng wl-clipboard libnotify-bin maim scrot xclip
             ;;
         arch|endeavouros)
-            sudo pacman -S --needed spectacle tesseract tesseract-data-rus tesseract-data-eng wl-clipboard libnotify maim
+            sudo pacman -S --needed spectacle tesseract tesseract-data-rus tesseract-data-eng wl-clipboard libnotify maim scrot xclip
             ;;
         *)
             echo -e "${RED}Неподдерживаемая ОС. Установите зависимости вручную.${NC}"
